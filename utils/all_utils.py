@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import joblib
 from matplotlib.colors import ListedColormap
 import os
+import logging
 
 plt.style.use("fivethirtyeight")
 
@@ -17,6 +18,7 @@ def prepare_data(df):
         tuple: it returns the tuples of dependent and independent features
     
     """
+    logging.info("preparing the data by segregating the independent and dependent variables")
     X = df.drop("y", axis=1)
     y = df["y"]
     return X, y
@@ -32,6 +34,7 @@ def save_model(model, filename):
     :param filename: its path to save the model
     :param model: train the model
     """
+    logging.info("Saved the trained model at (filePath)")
     model_dir = "models"
     os.makedirs(model_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
     filePath = os.path.join(model_dir, filename) # model/filename
@@ -40,6 +43,7 @@ def save_model(model, filename):
 
 def save_plot(df, file_name, model):
     def _create_base_plot(df):
+        logging.info("create the base plot")
         df.plot(kind="scatter", x="x1", y="x2", c="y", s=100, cmap="winter")
         plt.axhline(y=0, color="black", linestyle="--", linewidth=1)
         plt.axvline(x=0, color="black", linestyle="--", linewidth=1)
@@ -47,6 +51,7 @@ def save_plot(df, file_name, model):
         figure.set_size_inches(10, 8)
 
     def _plot_decision_regions(X, y, classfier, resolution=0.02):
+        logging.info("plotting the decision regions ")
         colors = ("red", "blue", "lightgreen", "gray", "cyan")
         cmap = ListedColormap(colors[: len(np.unique(y))])
 
@@ -78,3 +83,5 @@ def save_plot(df, file_name, model):
     os.makedirs(plot_dir, exist_ok=True) # ONLY CREATE IF MODEL_DIR DOESN"T EXISTS
     plotPath = os.path.join(plot_dir, file_name) # model/filename
     plt.savefig(plotPath)
+    logging.info("saving the plot at (plotPath)")
+
