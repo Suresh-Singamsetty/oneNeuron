@@ -7,3 +7,7 @@ oneNeuron | Perceptron code implementation
 ```bash
 git add . && git commit -m "name of commit" && git push origin main
 ```
+
+```bash
+cp Research\ Notebooks/demo.ipynb .
+```
