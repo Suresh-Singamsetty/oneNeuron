@@ -19,7 +19,7 @@ UrL: (https://guides.github.com/introduction/git-handbook/)
 ## Add Image -
 ![sample image](C:\Users\SURESH\Desktop\Live_Code\oneNeuron\plots\or.png)
 
-<img src="plots/or.png" alt="Girl in a jacket" width="500" height="600">
+<img src="plots/or.png" alt="Girl in a jacket" width="700" height=700">
 
 ## Python code
 ```python
@@ -35,3 +35,16 @@ def main(data, modelName, plotName, eta, epochs):
 
 ```
 
+## Dataset
+X1 | X2 | y
+-|-|-
+0|0|0
+0|1|0
+1|0|0
+1|1|1
+
+### 
+* point 1
+* poinr 2
+
+1.point
