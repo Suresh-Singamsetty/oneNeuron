@@ -12,7 +12,7 @@ git add . && git commit -m "name of commit" && git push origin main
 cp Research\ Notebooks/demo.ipynb .
 ```
 ```
-UrL: (https://guides.github.com/introduction/git-handbook/
+UrL: (https://guides.github.com/introduction/git-handbook/)
 ```
 ## Add Image -
 ![sample image](C:\Users\SURESH\Desktop\Live_Code\oneNeuron\plots\or.png)
